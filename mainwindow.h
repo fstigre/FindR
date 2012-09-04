@@ -15,27 +15,32 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-    void loadSettings();
-    void foundIt();
-    void foundItLessThan();
-    void searchingFiles();
-    void notFound();
-    void notFoundLessThan();
 
 private slots:
+    //LOCAL
+    void on_actionSave_Location_triggered();
+    void on_actionAbout_Finder_triggered();
+
+    //COPY AND PASTE
     void on_pushButton_Dxf_clicked();
     void on_pushButton_Pdf_clicked();
     void on_pushButton_Drawing_clicked();
-    
-    void on_actionSave_Location_triggered();
-
-    void on_actionAbout_Finder_triggered();
-
     void on_pushButton_Check_clicked();
 
 private:
-    Ui::MainWindow *ui;
+    //LOCAL
+    Ui::MainWindow *ui;    
     QLabel *statusLabel;
+    void loadSettings();
+
+    //COPY AND PASTE
+    void foundIt();
+    void notFound();
+    void searchingFiles();
+    void doesExists(QString);
+    void findDrawing(QString);
+    void findPdf(QString);
+    QString fileNumber;
 };
 
 #endif // MAINWINDOW_H
