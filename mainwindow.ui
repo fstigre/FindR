@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>452</width>
+    <height>250</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Arial</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>FindR</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="images.qrc">
+    <normaloff>:/icons/images/FindRLogo-256x256.png</normaloff>:/icons/images/FindRLogo-256x256.png</iconset>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>24</width>
+    <height>24</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLineEdit" name="lineEdit_FindPart">
+    <property name="geometry">
+     <rect>
+      <x>91</x>
+      <y>45</y>
+      <width>175</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>Part Number</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_Sufix">
+    <property name="geometry">
+     <rect>
+      <x>61</x>
+      <y>45</y>
+      <width>28</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>Sufix</string>
+    </property>
+    <property name="text">
+     <string>B</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_Dxf">
+    <property name="geometry">
+     <rect>
+      <x>293</x>
+      <y>132</y>
+      <width>100</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>Open PDF</string>
+    </property>
+    <property name="text">
+     <string>DXF</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_Pdf">
+    <property name="geometry">
+     <rect>
+      <x>293</x>
+      <y>89</y>
+      <width>100</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>Open DXF</string>
+    </property>
+    <property name="text">
+     <string>PDF</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_Drawing">
+    <property name="geometry">
+     <rect>
+      <x>293</x>
+      <y>45</y>
+      <width>100</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>Open Drawing</string>
+    </property>
+    <property name="text">
+     <string>DRAWING</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>61</x>
+      <y>25</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Part Number:</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>10</y>
+      <width>371</width>
+      <height>170</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QGraphicsView" name="graphicsView_Drawing">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>110</y>
+       <width>15</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Drawing File</string>
+     </property>
+    </widget>
+    <widget class="QGraphicsView" name="graphicsView_Pdf">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>110</y>
+       <width>15</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>PDF File</string>
+     </property>
+    </widget>
+    <widget class="QGraphicsView" name="graphicsView_Dxf">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>110</y>
+       <width>15</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>DXF File</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_Check">
+     <property name="geometry">
+      <rect>
+       <x>165</x>
+       <y>110</y>
+       <width>51</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Check File Existence</string>
+     </property>
+     <property name="text">
+      <string>Check</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>80</y>
+       <width>46</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>96</y>
+       <width>18</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>DXF</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>96</y>
+       <width>18</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>PDF</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>96</y>
+       <width>22</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>DWG</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>128</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Last  Checked :</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_LastChecked">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>130</y>
+       <width>71</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string>Last Number Checked</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>82</y>
+       <width>207</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>File Existence</string>
+     </property>
+    </widget>
+    <zorder>groupBox</zorder>
+    <zorder>graphicsView_Drawing</zorder>
+    <zorder>graphicsView_Pdf</zorder>
+    <zorder>graphicsView_Dxf</zorder>
+    <zorder>pushButton_Check</zorder>
+    <zorder>label</zorder>
+    <zorder>label_3</zorder>
+    <zorder>label_4</zorder>
+    <zorder>label_5</zorder>
+    <zorder>label_6</zorder>
+    <zorder>label_LastChecked</zorder>
+   </widget>
+   <zorder>groupBox_4</zorder>
+   <zorder>lineEdit_FindPart</zorder>
+   <zorder>lineEdit_Sufix</zorder>
+   <zorder>pushButton_Dxf</zorder>
+   <zorder>pushButton_Pdf</zorder>
+   <zorder>pushButton_Drawing</zorder>
+   <zorder>label_2</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>452</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <addaction name="actionSave_Location"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionAbout_Finder"/>
+   </widget>
+   <addaction name="menuAbout"/>
+   <addaction name="menuTools"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionSave_Location">
+   <property name="icon">
+    <iconset>
+     <normalon>:/icons/images/application_double.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Save Layout</string>
+   </property>
+  </action>
+  <action name="actionAbout_Finder">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icons/images/FindRLogo-256x256.png</normaloff>:/icons/images/FindRLogo-256x256.png</iconset>
+   </property>
+   <property name="text">
+    <string>About FindR</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>lineEdit_FindPart</tabstop>
+  <tabstop>pushButton_Drawing</tabstop>
+  <tabstop>pushButton_Pdf</tabstop>
+  <tabstop>pushButton_Dxf</tabstop>
+  <tabstop>lineEdit_Sufix</tabstop>
+ </tabstops>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
+ <connections/>
+</ui>
